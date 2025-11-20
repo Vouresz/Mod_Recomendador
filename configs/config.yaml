@@ -1,0 +1,28 @@
+# Configuración del Sistema de Recomendación Híbrido
+
+data:
+  data_dir: "data/"
+  
+training:
+  pass_threshold: 10.0
+  
+kg:
+  embedding_dim: 64
+  walk_length: 30
+  num_walks: 200
+  
+cf:
+  factors: 64
+  regularization: 0.01
+  iterations: 10
+  
+hybrid:
+  epochs: 50
+  batch_size: 64
+  learning_rate: 0.0005
+  negatives_per_positive: 2
+  weight_decay: 1e-5
+  
+output:
+  models_dir: "models/"
+  reports_dir: "reports/"
